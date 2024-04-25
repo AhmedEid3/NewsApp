@@ -85,16 +85,25 @@ function NewsScreen() {
       {searchedNews.length > 0 && (
         <View
           style={{
-            marginVertical: 2
+            marginLeft: 10,
+            marginBottom: 20
           }}
         >
-          <Text>Search Results:</Text>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: 'bold',
+              color: 'gray'
+            }}
+          >
+            Search Results:
+          </Text>
         </View>
       )}
 
       <FlatList
         data={searchedNews.length > 0 ? searchedNews : news}
-        renderItem={({ item, index }) => (
+        renderItem={({ item }) => (
           <View
             key={item.title}
             style={{
