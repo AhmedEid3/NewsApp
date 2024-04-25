@@ -18,7 +18,7 @@ export function SearchNews() {
         <Icon name="search" size={20} color="#666" style={styles.searchIcon} />
         <TextInput
           style={styles.input}
-          placeholder="Enter your search query"
+          placeholder="Search news..."
           value={text}
           onChangeText={handleChangeText}
           onEndEditing={() => setQuery(text)} // Trigger search action when the user finishes typing
